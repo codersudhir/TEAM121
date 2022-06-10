@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         #container{
+            display: grid;
+            height: 1200px;
+            grid-template-columns: repeat(4,1fr);
+            /* grid-template-rows: repeat(4,100px); */
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+        #container>div{
+           
+            height: 450px;
+           
+         
+ 
+
+        }
+        p+img{
+            width: 100px;
+            height: 50px;
+           margin-left: 90px;
+        }
+        img{
+            width: 100%;
+            height: 300px;
+            margin: auto;
+        }
+        h2{
+            text-align: center;
+        }
+        p{
+            text-align: center;
+        }
+
+       
+    </style>
+</head>
+<body>
+  <div id="links">
+    <div><a href="cart.html">cart</a></div>
+  </div>
+    <div id="container"></div>
+
+    
+</body>
+</html>
+<script>
+      cartarr=[]
+       var mensData = [
+    {
+      image_url:
+        "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/14059226/2021/6/12/572a6ab9-7c46-4e08-a638-46f178e775b01623482101341PUMAMenOliveGreenSolid10ForestNightTrackpantsTshirtsPumaMenS1.jpg",
+      name: "MEN'S REEBOK RUNNING ROADMAP SHOES",
+      price: "1170",
+      strikedoffprice: "$2599",
+    },
+    {
+      image_url:
+        "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/17589590/2022/4/1/3be94913-6932-496c-8c77-1675d6b1c0df1648807610464-FOREVER-21-Women-Dresses-591648807610014-1.jpg",
+      name: "MEN'S REEBOK SWIM ARUBA FLIP SLIPPERS ",
+      price: 699,
+      strikedoffprice: 999,
+    },
+    {
+      image_url:
+        "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/11369240/2020/10/16/f850ad8f-ae7f-438d-ad3b-2f11dd42e7801602827727638-W-Women-Dresses-3411602827724045-1.jpg",
+      name: " MEN'S REEBOK RUNNING AUSTIN SHOES",
+      price: 945,
+      strikedoffprice: 2099,
+    },
+    {
+      image_url:
+        "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/7779617/2018/11/28/4c64404c-4d5c-4f42-8b69-92b3f27d04081543391469807-Popnetic-Women-Dresses-5431543391468985-1.jpg",
+      name: "MEN'S REEBOK SWIM AVENGER FLIP LP SLIPPERS",
+      price: 399,
+      strikedoffprice: 799,
+    },
+    {
+      image_url:
+        "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/13236756/2022/4/13/f5fb9310-94bd-4e42-b1df-45ff90146a211649824354491DressBerryWomenGold-TonedBraidedT-StrapFlats2.jpg",
+      name: "MEN'S REEBOK RUNNING TEMPO SHOES ",
+      price: 1620,
+      strikedoffprice: 3599,
+    },
+    {
+      image_url:
+        "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/13981700/2022/6/6/3f9f14ae-d338-4430-98c5-a1ece580f9101654517244575-DressBerry-Women-Pink-Solid-Ballerinas-781654517243911-1.jpg",
+      name: " MEN'S REEBOK RUNNING ASTRO BOOSTER SHOES ",
+      price: 1440,
+      strikedoffprice: 3199,
+    },
+    {
+      image_url:
+        "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/7207108/2021/12/28/c02b9375-7e8c-447f-a1b9-4d1c0d8743c21640692167574ShoetopiaWomenCream-ColouredSolidPumps1.jpg ",
+      name: " MEN'S TRAINING WORKOUT READY ELITAGE PANTS ",
+      price: 1999,
+      strikedoffprice: 3199,
+    },
+   
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-EX3924/reebok_EX3924_1.jpg.plp ",
+      name: "MEN'S REEBOK SUPER SOFT FLIP SLIPPERS",
+      price: 699,
+      strikedoffprice: 999,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-FW0343/reebok_FW0343_1.jpg.plp ",
+      name: "MEN'S REEBOK RUNNING RUN SHOES  ",
+      price: 1620,
+      strikedoffprice: 3599,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-EX4285/reebok_EX4285_1.jpg.plp ",
+      name: "MEN'S REEBOK RUNNING GENESIS RUNNER SHOES  ",
+      price: 1620,
+      strikedoffprice: 3599,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-FV9519/MEN_SWIM_SLIPPERS_FV9519_1.jpg.plp ",
+      name: "MEN'S REEBOK SWIM RUSSLE FLIP SLIPPERS  ",
+      price: 599,
+      strikedoffprice: 999,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-FW0318/reebok_FW0318_1.jpg.plp ",
+      name: " MEN'S REEBOK RUNNING TREND RUNNER SHOES",
+      price: 1575,
+      strikedoffprice: 3499,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-H00024/reebok_H00024_1.jpg.plp ",
+      name: "UNISEX REEBOK RUNNING ZIG KINETICA II SHOES  ",
+      price: 9999,
+      strikedoffprice: 12000,
+    },
+   
+    
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-FW0318/reebok_FW0318_1.jpg.plp ",
+      name: " MEN'S REEBOK RUNNING TREND SHOES",
+      price: 1575,
+      strikedoffprice: 3499,
+    },
+    {
+      image_url:
+        " https://content.shop4reebok.com/static/Product-G57776/reebok_G57776_1.jpg.plp ",
+      name: "  MEN'S REEBOK RUNNING ZTAUR RUN SHOES ",
+      price: 3499,
+      strikedoffprice: 4999,
+    },
+    {
+      image_url:
+        " https://content.shop4reebok.com/static/Product-FV9555/MEN_SWIM_SLIPPERS_FV9555_1.jpg.plp  ",
+      name: "MEN'S REEBOK SWIM ULTRA FLIP SLIPPERS   ",
+      price: 749,
+      strikedoffprice: 1499,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-EX3994/reebok_EX3994_1.jpg.plp   ",
+      name: "  MEN'S REEBOK SWIM FLEX CONNECT SANDALS ",
+      price: 1149,
+      strikedoffprice: 2299,
+    },
+    
+  
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-FW0318/reebok_FW0318_1.jpg.plp ",
+      name: " MEN'S REEBOK RUNNING TREND RUNNER SHOES",
+      price: 1575,
+      strikedoffprice: 3499,
+    },
+   
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-EX4272/reebok_EX4272_1.jpg.plp",
+      name: "MEN'S REEBOK RUNNING QUICK DRIFTER SHOES",
+      price: 1620,
+      strikedoffprice: 3599,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-H02293/reebok_H02293_1.jpg.plp",
+      name: "MEN'S REEBOK DYNAMIC ZIGZAG SHOES",
+      price: 7599,
+      strikedoffprice: 9999,
+    },
+   
+   
+  ];
+
+        mensData.map(function(ele,ind,arr){
+            box=document.createElement("div");
+            avtar=document.createElement("img");
+            avtar.setAttribute("src",ele.image_url);
+            name1=document.createElement("h2");
+            name1.innerText=ele.name;
+            role=document.createElement("p")
+            role.innerText=ele.price;
+            logo=document.createElement("button");
+            logo.innerText=ele.strikedoffprice
+            box.append(avtar,name1,role,logo);
+            document.querySelector("#container").append(box)
+        })
+        cartarr.push(mensData)
+        cartls=localStorage.setItem("product",JSON.stringify(cartarr))
+
+        document.querySelector("button").addEventListener("click",myca)
+
+        function mycart(ele){
+          console.log(ele)
+        }
+
+
+
+</script>
